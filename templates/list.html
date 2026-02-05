@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Debates</h1>
+
+<div class="debate-list">
+  {% for d in debates %}
+    <div class="debate-card">
+      <h3>{{ d.topic }}</h3>
+      <p><b>Side:</b> {{ d.side }}</p>
+
+      {% if d.rating %}
+        <p><b>Score:</b> {{ d.rating }}/10</p>
+      {% endif %}
+
+      <a class="btn glass" href="/debate/{{ d.id }}">Open Debate</a>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

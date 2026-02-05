@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="main-layout">
+
+    <div class="hero-card">
+        <h1 class="main-title">Debate Arena</h1>
+
+        <p class="main-subtitle">
+            Pick a side, write an argument, and see if you can beat the AI.
+        </p>
+
+        <div class="hero-buttons">
+            <a class="btn primary" href="/create">Start a Debate</a>
+            <a class="btn secondary" href="/debates">View History</a>
+        </div>
+    </div>
+
+    <div class="sliding-sidebar full-height">
+        <div class="sidebar-label">FEATURES</div>
+
+        <div class="sidebar-items">
+            <div class="side-item">
+                <span class="icon">⚖️</span>
+                <div>
+                    <h3>Logic</h3>
+                    <p>Deep Analysis</p>
+                </div>
+            </div>
+
+            <div class="side-item">
+                <span class="icon">⚡</span>
+                <div>
+                    <h3>Counter</h3>
+                    <p>Instant Pushback</p>
+                </div>
+            </div>
+
+            <div class="side-item">
+                <span class="icon">📈</span>
+                <div>
+                    <h3>Clarity</h3>
+                    <p>1–10 Rating</p>
+                </div>
+            </div>
+
+            <div class="side-item">
+                <span class="icon">🌐</span>
+                <div>
+                    <h3>Global</h3>
+                    <p>Community Feed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

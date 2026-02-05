@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-center">
+  <div class="glass-panel">
+    <h2>{{ debate.topic }}</h2>
+
+    <p><b>Your Side:</b> {{ debate.side }}</p>
+    <p><b>Your Argument:</b> {{ debate.argument }}</p>
+
+    <hr>
+
+    {% if debate.ai_counter %}
+    <h3>AI Response</h3>
+
+    <p><b>Counter:</b> {{ debate.ai_counter }}</p>
+    <p><b>Feedback:</b> {{ debate.ai_feedback }}</p>
+    <p><b>Score:</b> {{ debate.rating }}/10</p>
+
+    <hr>
+
+      {% if debate.ai_reply %}
+<hr>
+<h3>AI Follow-Up</h3>
+<p>{{ debate.ai_reply }}</p>
+<p><b>Score:</b> {{ debate.ai_counter_rating }}/10</p>
+{% endif %}
+
+
+    <form method="post" action="/counter/{{ debate.id }}">
+        <textarea name="user_counter" rows="4" placeholder="Your counter argument..." required></textarea>
+        <br><br>
+        <button type="submit">Continue Debate</button>
+    </form>
+
+    <form method="post" action="/end/{{ debate.id }}">
+        <button style="margin-top:15px;">End Debate</button>
+    </form>
+
+  {% if debate.average_score is not none %}
+    <hr>
+    <h3>Final Result</h3>
+    <p><b>Average Score:</b> {{ debate.average_score }}/10</p>
+{% endif %}
+
+
+{% else %}
+    <form method="post" action="/ai/{{ debate.id }}">
+        <button type="submit">Challenge AI</button>
+    </form>
+{% endif %}
+
+
+{% endblock %}

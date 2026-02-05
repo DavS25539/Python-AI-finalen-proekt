@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ debate.topic }}</h2>
+
+<p><b>Side:</b> {{ debate.side }}</p>
+<p><b>Argument:</b> {{ debate.argument }}</p>
+
+<hr>
+
+{% if debate.ai_counter %}
+    <p><b>AI Counter:</b> {{ debate.ai_counter }}</p>
+    <p><b>Feedback:</b> {{ debate.ai_feedback }}</p>
+{% else %}
+    <form method="post" action="/ai/{{ debate.id }}">
+        <button>Generate AI Response</button>
+    </form>
+{% endif %}
+
+{% endblock %}
+</body>
+</html>
