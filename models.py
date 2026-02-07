@@ -25,3 +25,4 @@ class Debate(Base):
 
     scores = Column(String(255))
     average_score = Column(Float)
+    # ss

@@ -419,3 +419,4 @@ select option {
     0%,50%,100% { border-color: transparent; }
     25%,75% { border-color: var(--highlight); }
 }
+
