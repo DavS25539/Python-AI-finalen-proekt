@@ -153,9 +153,6 @@ h1 {
     transform: scale(0.97);
 }
 
-/* =========================
-   GLASS BUTTON VARIANT ⭐
-========================= */
 .btn.glass {
     background: rgba(255, 255, 255, 0.12);
     color: #ffffff;
@@ -172,9 +169,6 @@ h1 {
     box-shadow: 0 12px 40px rgba(79,172,254,0.35);
 }
 
-/* =========================
-   SLIDING SIDEBAR (NO SNAP)
-========================= */
 .sliding-sidebar {
     position: fixed;
     top: 50%;
@@ -204,8 +198,6 @@ h1 {
     box-shadow: -20px 0 50px rgba(0,0,0,0.6);
 }
 
-
-/* Sidebar label */
 .sidebar-label {
     position: absolute;
     left: -80px;
@@ -217,7 +209,6 @@ h1 {
     pointer-events: none;
 }
 
-/* Sidebar items */
 .side-item {
     display: flex;
     align-items: center;
@@ -245,9 +236,6 @@ h1 {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
 @media (max-width: 800px) {
     h1 {
         font-size: 2.6rem;
@@ -263,9 +251,6 @@ h1 {
 }
 
 
-/* =========================
-   OUTLINED GLASS CARD
-========================= */
 .card {
     background: rgba(18, 18, 18, 0.75);
     backdrop-filter: blur(14px);
